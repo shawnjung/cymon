@@ -44,7 +44,7 @@ class Application
 
 
   mark_as_offline: (socket) ->
-    socket.user.mark_as_offline()
+    socket.user.mark_as_offline() if socket.user
 
 
 
