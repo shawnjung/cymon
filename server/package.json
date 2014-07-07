@@ -1,0 +1,11 @@
+{
+  "name": "cymon-socket-server",
+  "version": "0.0.1",
+  "description": "Pretty cymon packet server",
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "require-tree": "^0.3.3",
+    "socket.io": "^1.0.6",
+    "underscore": "^1.6.0"
+  }
+}
