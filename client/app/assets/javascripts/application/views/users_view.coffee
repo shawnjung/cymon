@@ -10,7 +10,7 @@ class Cymon.UsersView extends Cymon.View
         @_render_users()
 
 
-  socket_room: 'current_users'
+  socket_room: 'lobby'
 
   socket_events:
     'user_added': 'add_user'

@@ -1,2 +1,2 @@
 client: savanna start ./client
-server: coffee ./server/server.coffee 8090
+server: coffee ./server 8090

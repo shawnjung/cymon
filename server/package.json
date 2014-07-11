@@ -6,6 +6,7 @@
     "backbone": "^1.1.2",
     "require-tree": "^0.3.3",
     "socket.io": "^1.0.6",
-    "underscore": "^1.6.0"
+    "underscore": "^1.6.0",
+    "underscore": "^0.3.3"
   }
 }

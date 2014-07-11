@@ -2,17 +2,18 @@ class Users extends Backbone.Collection
   define_io: (io) ->
     @io = io
 
-  define_room_events: (options)->
+  define_lobby_events: (options)->
     @define_io options.io unless @io
+    lobby = @io.sockets.to('lobby')
 
     @on 'add', (user) ->
-      @io.sockets.to('current_users').emit 'user_added', user.attributes
+      lobby.emit 'user_added', user.attributes
 
     @on 'remove', (user) ->
-      @io.sockets.to('current_users').emit 'user_removed', user.id
+      lobby.emit 'user_removed', user.id
 
     @on 'update', (user) ->
-      @io.sockets.to('current_users').emit 'user_updated', user.attributes
+      lobby.emit 'user_updated', user.attributes
 
 
 

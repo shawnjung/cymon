@@ -4,9 +4,9 @@ args        = process.argv.splice(2)
 global.uuid     = require 'node-uuid'
 global._        = require 'underscore'
 global.Backbone = require 'backbone'
+require_tree    = require 'require-tree'
 
 # load app
-require_tree = require 'require-tree'
 global.App = require_tree 'app'
 global.CymonServer = App
 
