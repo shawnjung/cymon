@@ -4,9 +4,9 @@
   "description": "Pretty cymon packet server",
   "dependencies": {
     "backbone": "^1.1.2",
+    "node-uuid": "^1.4.1",
     "require-tree": "^0.3.3",
     "socket.io": "^1.0.6",
-    "underscore": "^1.6.0",
-    "require-tree": "^0.3.3"
+    "underscore": "^1.6.0"
   }
 }

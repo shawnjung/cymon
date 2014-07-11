@@ -5,7 +5,7 @@ class Room extends Backbone.Model
     limit: 2
     current_turn: -1
     current_level: 1
-    maxium_step:
+    maxium_step: 4
     ended: false
     private: true
 
@@ -42,7 +42,7 @@ class Room extends Backbone.Model
     return false unless @is_startable user: options.by
     @set 'current_turn', 0
     @queue.reset_steps()
-    @users.each (user) ->
+    @users.each (user) =>
       user.socket.emit 'start_game', current_turn: @get('current_turn')
     true
 

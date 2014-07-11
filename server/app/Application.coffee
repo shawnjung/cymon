@@ -98,7 +98,7 @@ class Application
   start_game: (socket, params) ->
     user = socket.user
     room = user.current_room
-    if room.start_game by: user
+    if room.start_game(by: user)
       socket_room = room.get_socket_room io: @io
       socket_room.emit 'start_game'
     else
@@ -108,7 +108,7 @@ class Application
   record_queue: (socket, params) ->
     user = socket.user
     room = user.current_room
-    if room.record_queue user: user, queue: params.queue
+    if room.record_queue(user: user, queue: params.queue)
       socket_room = room.get_socket_room io: @io
       socket_room.emit 'received_queue'
       unless room.is_my_turn user
